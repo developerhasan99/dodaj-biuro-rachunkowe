@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form class="add-accounting-office" id="addAccountingOffice">
+			<div class="row">
+				<div class="column">
+					<div class="name-group">
+						<label for="name">Nazwa:</label>
+						<input type="text" id="name" name="name" />
+						<div class="invalid-feedback">Proszę podać nazwę swojej firmy.</div>
+					</div>
+
+					<div class="email-group">
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="email" />
+						<div class="invalid-feedback">Podaj adres e-mail swojej firmy.</div>
+					</div>
+
+					<div>
+						<label for="www">WWW:</label>
+						<input type="url" id="www" name="www" />
+					</div>
+
+					<div>
+						<label for="phone">Telefon:</label>
+						<input type="tel" id="phone" name="phone" />
+					</div>
+					<div>
+						<label for="company-description">Opis firmy:</label>
+						<textarea
+							name="companyDescription"
+							id="company-description"
+							cols="30"
+							rows="4"
+						></textarea>
+					</div>
+				</div>
+				<div class="column">
+					<div>
+						<label for="street">Ulica:</label>
+						<input type="text" id="street" name="street" />
+					</div>
+
+					<div>
+						<label for="zip">Kod pocztowy:</label>
+						<input type="text" id="zip" name="zip" />
+					</div>
+					<div class="province-group">
+						<label for="province">Województwo:</label>
+						<select name="province" id="province" role="searchbox">
+							<option value="" selected disabled>Wybierz prowincję</option>
+						</select>
+						<div class="invalid-feedback">Please provide a valid city.</div>
+					</div>
+					<div>
+						<label for="city">Miasto:</label>
+						<select name="city" id="city" disabled role="searchbox">
+							<option value="" selected>Proszę wybrać województwo.</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="keywords">Tagi:</label>
+						<textarea
+							name="keywords"
+							id="keywords"
+							cols="30"
+							rows="4"
+						></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="policy-group">
+				<input type="checkbox" id="policy_check" name="policy_check" />
+				<label for="policy_check"
+					>Oświadczam, iż zapoznałem się z
+					<a href="https://ksiegowosc24.pl/sklep/regulamin/">Regulaminem</a> i
+					<a href="https://ksiegowosc24.pl/polityka-prywatnosci/"
+						>Polityką Prywatności</a
+					>
+					serwisu Ksiegowosc24.pl oraz akceptuję ich postanowienia.</label
+				>
+				<div class="invalid-feedback">
+					Zaznacz to pole, jeśli chcesz kontynuować.
+				</div>
+			</div>
+
+			<button type="submit">
+				<span
+					class="spinner-border spinner-border-sm"
+					role="status"
+					aria-hidden="true"
+				></span>
+				Zapisz dane
+			</button>
+		</form>
+		<div class="alert alert-success" role="alert">
+			Dane biura zostały przesłane pomyślnie i są sprawdzane. Twoje biuro
+			zostanie dodane do naszej listy po zatwierdzeniu przez administratora!
+		</div>
+		<div class="alert alert-danger" role="alert">
+			Wystąpił błąd podczas przesyłania danych biurowych. Proszę spróbuj
+			ponownie!
+		</div>
+		<!-- <script src="https://ksiegowosc24.pl/wp-content/themes/blocksy-child/index-db43c6de.js"></script> -->
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>
